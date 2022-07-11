@@ -137,28 +137,28 @@ spec:
                                 properties:
                                   required:
                                     type: boolean
-                          - type: object
-                            properties:
-                              type:
-                                type: string
-                              title:
-                                type: string
-                              properties:
-                                type: object
-                                properties:
-                                  shape:
-                                    type: string
-                                  steps:
-                                    type: integer
-                              validations:
-                                type: object
-                                properties:
-                                  required:
-                                    type: boolean
-                              layout:
-                                type: object
-                                properties:
-                                  type:
-                                    type: string
-                                  href:
-                                    type: string
+                          # - type: object
+                          #   properties:
+                          #     type:
+                          #       type: string
+                          #     title:
+                          #       type: string
+                          #     properties:
+                          #       type: object
+                          #       properties:
+                          #         shape:
+                          #           type: string
+                          #         steps:
+                          #           type: integer
+                          #     validations:
+                          #       type: object
+                          #       properties:
+                          #         required:
+                          #           type: boolean
+                          #     layout:
+                          #       type: object
+                          #       properties:
+                          #         type:
+                          #           type: string
+                          #         href:
+                          #           type: string
