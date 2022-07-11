@@ -232,12 +232,6 @@ spec:
             - type: string
               string:
                 fmt: "http://log-service-service.%s.svc"
-        - fromFieldPath: "spec.toRepo.domain"
-          toFieldPath: "spec.credentials.secretRef.name"
-          transforms:
-            - type: string
-              string:
-                fmt: "%s-secret"
         - fromFieldPath: "spec.namespace"
           toFieldPath: "spec.credentials.secretRef.namespace"
     - base:
