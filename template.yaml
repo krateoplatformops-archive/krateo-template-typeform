@@ -1,0 +1,253 @@
+apiVersion: krateo.io/v1alpha1
+kind: Template
+metadata:
+  name: Typeform Template
+  annotations:
+    title: Typeform template
+    description: Typeform Template
+    owner: mauro.sala@kiratech.it
+    icon: fa-solid fa-font
+  labels:
+    tags:
+      - typeform
+spec:
+  widgets:
+    - title: Titolo questionario
+      box: Template per creazione di un questionario su typeform
+      boxStyle: success
+      properties:
+        title:
+          title: Titolo questionario
+          required: true
+          placeholder: Titolo questionario
+        surveyImage:
+          title: Immagine questionario
+          required: true
+          placeholder: Immagine questionario
+          default: https://images.typeform.com/images/p9ctZzmsu44E
+    - title: Schermate inizio e chiusura
+      properties:
+        welcomeScreenTitle:
+          title: Messaggio di benvenuto
+          required: true
+          placeholder: Dai il benvenuto ai tuoi ospiti
+        welcomeButtonText:
+          title: Testo bottone inizio questionario
+          required: true
+          placeholder: Testo bottone inizio questionario
+          default: Start
+        thankyouScreenTitle:
+          title: Messaggio di chiusura
+          required: true
+          placeholder: Saluta i tuoi ospiti
+    - title: Contatti
+      properties:
+        emailTitle:
+          title: Titolo campo email
+          required: true
+          placeholder: Inserisci il tuo indirizzo email
+        emailDescription:
+          title: Descrizione campo email
+          required: true
+          placeholder: Email description
+          default: Ti contatteremo solo se sarai interessato
+
+    - title: Valutazione Evento
+      properties:
+        ratingEventTitle:
+          title: Valutazione generale evento
+          required: true
+          default: In generale, che valutazione complessiva dai all'evento?
+        ratingEventShape:
+          title: Icona valutazione generale
+          required: true
+          values:
+            - ""
+            - cat
+            - circle
+            - cloud
+            - crown
+            - dog
+            - droplet
+            - flag
+            - heart
+            - lightbulb
+            - pencil
+            - skull
+            - star
+            - thunderbolt
+            - tick
+            - trophy
+            - up
+            - user
+        ratingExposureTitle:
+          title: Valutazione esposizione
+          required: true
+          default: Come giudichi il livello di esposizione degli speaker?
+        ratingExposureShape:
+          title: Icona valutazione esposizione
+          required: true
+          placeholder: Rating shape
+          values:
+            - ""
+            - cat
+            - circle
+            - cloud
+            - crown
+            - dog
+            - droplet
+            - flag
+            - heart
+            - lightbulb
+            - pencil
+            - skull
+            - star
+            - thunderbolt
+            - tick
+            - trophy
+            - up
+            - user
+        ratingCompletenessTitle:
+          title: Valutazione completezza
+          required: true
+          default: Indica il livello di completezza degli argomenti trattati
+        ratingCompletenessShape:
+          title: Icona valutazione completezza
+          required: true
+          values:
+            - ""
+            - cat
+            - circle
+            - cloud
+            - crown
+            - dog
+            - droplet
+            - flag
+            - heart
+            - lightbulb
+            - pencil
+            - skull
+            - star
+            - thunderbolt
+            - tick
+            - trophy
+            - up
+            - user
+        ratingDurationTitle:
+          title: Valutazione durata
+          required: true
+          default: Hai apprezzato la durata dell'evento?
+        ratingDurationShape:
+          title: Icona valutazione durata
+          required: true
+          values:
+            - ""
+            - cat
+            - circle
+            - cloud
+            - crown
+            - dog
+            - droplet
+            - flag
+            - heart
+            - lightbulb
+            - pencil
+            - skull
+            - star
+            - thunderbolt
+            - tick
+            - trophy
+            - up
+            - user
+        ratingVoteTitle:
+          title: Voto generale
+          required: true
+          default: Che voto daresti alla soluzione Krateo PlatformOps?
+        ratingVoteShape:
+          title: Icona voto generale
+          required: true
+          values:
+            - ""
+            - cat
+            - circle
+            - cloud
+            - crown
+            - dog
+            - droplet
+            - flag
+            - heart
+            - lightbulb
+            - pencil
+            - skull
+            - star
+            - thunderbolt
+            - tick
+            - trophy
+            - up
+            - user
+
+    - title: Domande aperte
+      properties:
+        featureTitle:
+          title: Funzioni
+          required: true
+          default: Quali sono le feature di Krateo PlatformOps che ti sono piaciute di piu/che pensi possano essere piu utili?
+        functionalityTitle:
+          title: Funzionalita
+          required: true
+          default: Ci sono delle funzionalita che aggiungeresti?
+        maxLength:
+          title: Lunghezza massima
+          required: true
+          placeholder: 300
+          type: number
+
+    - title: Argomenti
+      properties:
+        titleInteresting:
+          title: Valutazione argomenti
+          required: true
+          placeholder: Quali sono gli aspetti che si sono dimostrati piu interessanti durante l'evento?
+          description: "Ad esempio: Quali sono gli aspetti che si sono dimostrati piu interessanti durante l'evento?"
+
+    - title: Opzioni contatto
+      properties:
+        titleContacts:
+          title: Contatti
+          required: true
+          default: Vorresti essere ricontattato da noi per un colloquio approfondito e personalizzato per approfondire Krateo?
+        choice1:
+          title: Opzione 1
+          required: true
+          default: Si, entro i prossimi 3 mesi
+        choice2:
+          title: Opzione 2
+          required: true
+          default: Si, entro i prossimi 6 mesi
+        choice3:
+          title: Opzione 3
+          required: true
+          default: Si, entro i prossimi 12 mesi
+        choice4:
+          title: Opzione 4
+          required: true
+          placeholder: No, non mi interessa
+
+    - title: Repository git di destinazione
+      properties:
+        provider:
+          title: Git Provider
+          description: github.com
+          required: true
+          default: github.com
+          values:
+            - github.com
+        organizationName:
+          title: Repository Organization
+          required: true
+          description: Organization name
+          default: krateoplatformops
+        repositoryName:
+          title: Repository Name
+          required: true
+          description: The name of the repository

@@ -1,0 +1,9 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Configuration
+metadata:
+  name: krateo-template-typeform
+spec:
+  package: 'ghcr.io/krateoplatformops/krateo-template-typeform:latest'
+  packagePullPolicy: Always
+  revisionActivationPolicy: Automatic
+  revisionHistoryLimit: 1

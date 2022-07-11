@@ -1,0 +1,201 @@
+# {{=<% %>=}}
+apiVersion: typeform.krateo.io/v1alpha1
+kind: Form
+metadata:
+  name: <% title %>-typeform
+  labels:
+    deploymentId: <% deploymentId %>
+spec:
+  dashboard:
+    description: Typeform survey
+    icon: "fa-solid fa-fire"
+    tags:
+      - typeform
+      - survey
+      - krateo
+    links:
+      - url: https://<% provider %>/<% organizationName %>/<% repositoryName %>
+        title: <% organizationName %>/<% repositoryName %>
+        icon: "fa-brands fa-git"
+    plugins:
+      - name: documentation
+        values:
+          - README.md
+        type: doc
+        icon: fa-solid fa-book
+        endpointName: github.com
+      - name: kubernetes
+        value: "deploymentId=<% deploymentId %>"
+        type: kubernetes
+        icon: fa-brands fa-docker
+    owner: <% owner %>
+  namespace: <% namespace %>
+  fromRepo:
+    domain: github.com
+    provider: github
+    apiUrl: https://api.github.com/
+    repositoryName: typeform-template
+    organizationName: krateoplatformops
+    schema: https
+  toRepo:
+    domain: <% domain %>
+    provider: <% provider %>
+    apiUrl: <% apiUrl %>
+    repositoryName: <% repositoryName %>
+    organizationName: <% organizationName %>
+    schema: <% schema %>
+  form:
+    title: <% title %>
+    welcomeScreens:
+      - title: <% welcomeScreenTitle %>
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+        properties:
+          buttonText: <% welcomeButtonText %>
+          showButton: true
+
+    thankyouScreens:
+      - title: <% thankyouScreenTitle %>
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+        properties:
+          shareIcons: true
+          showButton: false
+
+    fields:
+      - type: email
+        title: <% emailTitle %>
+        properties:
+          description: <% emailDescription %>
+        validations:
+          required: true
+
+      - type: rating
+        title: <% ratingEventTitle %>
+        properties:
+          shape: <% ratingEventShape %>
+          steps: 5
+        validations:
+          required: true
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+
+      - type: rating
+        title: <% ratingExposureTitle %>
+        properties:
+          shape: <% ratingExposureShape %>
+          steps: 5
+        validations:
+          required: true
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+
+      - type: rating
+        title: <% ratingCompletenessTitle %>
+        properties:
+          shape: <% ratingCompletenessShape %>
+          steps: 5
+        validations:
+          required: true
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+
+      - type: rating
+        title: <% ratingDurationTitle %>
+        properties:
+          shape: <% ratingDurationShape %>
+          steps: 5
+        validations:
+          required: true
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+
+      - type: rating
+        title: <% ratingVoteTitle %>
+        properties:
+          shape: <% ratingVoteShape %>
+          steps: 5
+        validations:
+          required: true
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+
+      - type: long_text
+        title: <% featureTitle %>
+        validations:
+          maxLength: <% maxLength %>
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+
+      - type: long_text
+        title: <% functionalityTitle %>
+        validations:
+          maxLength: <% maxLength %>
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+
+      - type: multiple_choice
+        title: <% titleInteresting %>
+        properties:
+          description: (possibilita di scelta multipla)
+          allowOtherChoice: true
+          choices: ['Il keynote su Krateo PlatformOps',
+          'Il talk Platform Teams: Key to Success at Scale',
+          'Il talk DevOps: Bridging the Gap Between Modern and Legacy Architectures',
+          'Il talk Cloud Native Architecture to the Edge',
+          'La sessione di live coding sui Crossplane Provider',
+          'La sessione di live coding sulle CrossplaneComposition',
+          'La sessione di live coding sui Krateo Template'
+          ]
+        validations:
+          required: true
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
+
+      - type: multiple_choice
+        title: <% titleContacts %>
+        properties:
+          description: (possibilita di scelta multipla)
+          allowOtherChoice: false
+          choices:
+            - <% choice1 %>
+            - <% choice2 %>
+            - <% choice3 %>
+            - <% choice4 %>
+        validations:
+          required: true
+        layout:
+          type: split
+          attachment:
+            type: image
+            href: <% surveyImage %>
