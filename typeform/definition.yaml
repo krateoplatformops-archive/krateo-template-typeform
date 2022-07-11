@@ -145,5 +145,10 @@ spec:
                             properties:
                               type:
                                 type: string
-                              href:
-                                type: string
+                              attachment:
+                                type: object
+                                properties:
+                                  type:
+                                    type: string
+                                  href:
+                                    type: string
