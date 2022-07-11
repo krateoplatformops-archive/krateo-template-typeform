@@ -135,11 +135,19 @@ spec:
                                 type: string
                               steps:
                                 type: integer
+                              allowOtherChoice:
+                                type: boolean
+                              choices:
+                                type: array
+                                items:
+                                  type: string
                           validations:
                             type: object
                             properties:
                               required:
                                 type: boolean
+                              maxLength:
+                                type: integer
                           layout:
                             type: object
                             properties:
