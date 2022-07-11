@@ -17,6 +17,9 @@ spec:
           properties:
             spec:
               properties:
+                dashboard:
+                  description: elements for Krateo UI
+                  type: object
                 namespace:
                   description: Kubernetes namespace for Krateo, i.e. krateo-system
                   type: string

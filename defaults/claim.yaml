@@ -1,6 +1,6 @@
 # {{=<% %>=}}
-apiVersion: typeform.krateo.io/v1alpha1
-kind: Form
+apiVersion: templates.krateo.io/v1alpha1
+kind: TypeForm
 metadata:
   name: <% title %>-typeform
   labels:
