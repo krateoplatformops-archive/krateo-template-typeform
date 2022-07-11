@@ -246,6 +246,8 @@ spec:
       patches:
         - fromFieldPath: "metadata.labels[deploymentId]"
           toFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "spec.form.title"
+          toFieldPath: "spec.forProvider.title"
         - fromFieldPath: "spec.form"
           toFieldPath: "spec.forProvider"
         - fromFieldPath: metadata.name

@@ -25,6 +25,10 @@ spec:
           required: true
           placeholder: Immagine questionario
           default: https://images.typeform.com/images/p9ctZzmsu44E
+        namespace:
+          title: Krateo namespace
+          description: Krateo namespace for the TypeForm
+          required: true
     - title: Schermate inizio e chiusura
       properties:
         welcomeScreenTitle:
