@@ -90,3 +90,30 @@ spec:
                                 type: string
                               showButton:
                                 type: boolean
+                    thankyouScreens:
+                      description: Typeform thankyouScreens
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                          layout:
+                            type: object
+                            properties:
+                              type:
+                                type: string
+                              attachment:
+                                type: object
+                                properties:
+                                  type:
+                                    type: string
+                                  href:
+                                    type: string
+                          properties:
+                            type: object
+                            properties:
+                              shareIcons:
+                                type: boolean
+                              showButton:
+                                type: boolean
