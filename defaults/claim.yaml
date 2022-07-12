@@ -169,7 +169,7 @@ spec:
           choices: ['Il keynote su Krateo PlatformOps',
           'Il talk Platform Teams: Key to Success at Scale',
           'Il talk DevOps: Bridging the Gap Between Modern and Legacy Architectures',
-          'Il talk Cloud Native Architecture to the Edge',
+          'How to Build Your Platform Team',
           'La sessione di live coding sui Crossplane Provider',
           'La sessione di live coding sulle CrossplaneComposition',
           'La sessione di live coding sui Krateo Template'
